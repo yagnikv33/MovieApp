@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MovieApp</string>
+    <string name="enter_movie_name">Enter movie name</string>
+    <string name="no_data_found">No data found</string>
+    <string name="name">Name:</string>
+    <string name="release_date">Release date:</string>
+    <string name="director_name">Director name:</string>
+    <string name="run_time">Run time:</string>
+    <string name="type">Type:</string>
+    <string name="genre">Genre:</string>
+    <string name="idbm_rating">IDBM rating:</string>
+    <string name="writer">Writer:</string>
+    <string name="actor">Actor:</string>
+    <string name="plot">Plot:</string>
+</resources>

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.01" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.99" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.02" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.98" />
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toTopOf="@id/guidelineTop" />
+
+        <ImageView
+            android:id="@+id/iv_poster"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="@id/iv_back"
+            app:layout_constraintTop_toBottomOf="@id/iv_back"
+            tools:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_label_title"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:text="@string/name"
+            app:layout_constraintStart_toStartOf="@id/iv_poster"
+            app:layout_constraintTop_toBottomOf="@id/iv_poster" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="3"
+            app:layout_constraintBottom_toBottomOf="@id/tv_label_title"
+            app:layout_constraintStart_toEndOf="@id/tv_label_title"
+            app:layout_constraintTop_toTopOf="@id/tv_label_title"
+            tools:text="Nano" />
+
+        <TextView
+            android:id="@+id/tv_label_release_date"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/release_date"
+            app:layout_constraintStart_toStartOf="@id/tv_label_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_label_title" />
+
+        <TextView
+            android:id="@+id/tv_release_date"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_label_release_date"
+            app:layout_constraintStart_toEndOf="@+id/tv_label_release_date"
+            app:layout_constraintTop_toTopOf="@+id/tv_label_release_date"
+            tools:text="02/12/2002" />
+
+        <TextView
+            android:id="@+id/tv_label_run_time"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/run_time"
+            app:layout_constraintStart_toStartOf="@id/tv_label_release_date"
+            app:layout_constraintTop_toBottomOf="@id/tv_label_release_date" />
+
+        <TextView
+            android:id="@+id/tv_run_time"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_label_run_time"
+            app:layout_constraintStart_toEndOf="@+id/tv_label_run_time"
+            app:layout_constraintTop_toTopOf="@+id/tv_label_run_time"
+            tools:text="02:42" />
+
+        <TextView
+            android:id="@+id/tv_label_director"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/director_name"
+            app:layout_constraintStart_toStartOf="@id/tv_label_run_time"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_run_time" />
+
+        <TextView
+            android:id="@+id/tv_director"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_label_director"
+            app:layout_constraintStart_toEndOf="@+id/tv_label_director"
+            app:layout_constraintTop_toTopOf="@+id/tv_label_director"
+            tools:text="John smith" />
+
+        <TextView
+            android:id="@+id/tv_label_movie_type"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/type"
+            app:layout_constraintStart_toStartOf="@id/tv_label_director"
+            app:layout_constraintTop_toBottomOf="@id/tv_label_director" />
+
+        <TextView
+            android:id="@+id/tv_movie_type"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_label_movie_type"
+            app:layout_constraintStart_toEndOf="@id/tv_label_movie_type"
+            app:layout_constraintTop_toTopOf="@+id/tv_label_movie_type"
+            tools:text="Crime" />
+
+        <TextView
+            android:id="@+id/tv_label_movie_genre"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/genre"
+            app:layout_constraintStart_toStartOf="@id/tv_label_movie_type"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_movie_type" />
+
+        <TextView
+            android:id="@+id/tv_movie_genre"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/tv_label_movie_genre"
+            app:layout_constraintStart_toEndOf="@+id/tv_label_movie_genre"
+            app:layout_constraintTop_toTopOf="@id/tv_label_movie_genre"
+            tools:text="thriller" />
+
+        <TextView
+            android:id="@+id/tv_label_idbm_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/idbm_rating"
+            app:layout_constraintStart_toStartOf="@id/tv_label_movie_genre"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_movie_genre" />
+
+        <TextView
+            android:id="@+id/tv_idbm_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBottomOf="@id/tv_label_idbm_rating"
+            app:layout_constraintStart_toEndOf="@+id/tv_label_idbm_rating"
+            app:layout_constraintTop_toTopOf="@id/tv_label_idbm_rating"
+            tools:text="4 star"/>
+
+        <TextView
+            android:id="@+id/tv_label_writer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/writer"
+            app:layout_constraintStart_toStartOf="@id/tv_label_idbm_rating"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_idbm_rating" />
+
+        <TextView
+            android:id="@+id/tv_writer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/tv_label_writer"
+            app:layout_constraintStart_toEndOf="@+id/tv_label_writer"
+            app:layout_constraintTop_toTopOf="@id/tv_label_writer"
+            tools:text="Smith" />
+
+        <TextView
+            android:id="@+id/tv_label_actor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/actor"
+            app:layout_constraintStart_toStartOf="@id/tv_label_writer"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_writer" />
+
+        <TextView
+            android:id="@+id/tv_actor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_label_actor"
+            app:layout_constraintStart_toEndOf="@+id/tv_label_actor"
+            app:layout_constraintTop_toTopOf="@+id/tv_label_actor"
+            tools:text="John evans" />
+
+        <TextView
+            android:id="@+id/tv_label_plot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/plot"
+            app:layout_constraintStart_toStartOf="@+id/tv_label_actor"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_actor" />
+
+        <TextView
+            android:id="@+id/tv_plot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_label_plot"
+            app:layout_constraintStart_toEndOf="@+id/tv_label_plot"
+            app:layout_constraintTop_toTopOf="@+id/tv_label_plot"
+            tools:text="Crime" />
+
+        <TextView
+            android:id="@+id/tv_label_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/tv_label_plot"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_plot"
+            tools:text="English" />
+
+        <TextView
+            android:id="@+id/tv_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_label_language"
+            app:layout_constraintStart_toEndOf="@+id/tv_label_language"
+            app:layout_constraintTop_toTopOf="@+id/tv_label_language"
+            tools:text="English" />
+
+        <ProgressBar
+            android:id="@+id/pb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
